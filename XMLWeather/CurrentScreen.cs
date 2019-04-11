@@ -20,9 +20,9 @@ namespace XMLWeather
         public void DisplayCurrent()
         {
             location.Text = Form1.days[0].location;
-            currentTemp.Text = Form1.days[0].currentTemp;
-            min.Text = Form1.days[0].min;
-            max.Text = Form1.days[0].max;
+            currentTemp.Text = Convert.ToDouble(Form1.days[0].currentTemp).ToString("0.0") + "°C";
+            min.Text = Convert.ToDouble(Form1.days[0].min).ToString("0.0") + "°C";
+            max.Text = Convert.ToDouble(Form1.days[0].max).ToString("0.0") + "°C";
             date.Text = DateTime.Now.ToString("dd-MM-yy");
             time.Text = DateTime.Now.ToString("hh:mm:ss tt");
             precipitation.Text = Form1.days[0].precipitation;

@@ -56,12 +56,12 @@ namespace XMLWeather
                 d.windSpeed = reader.GetAttribute("mps") + " mps";
 
                 reader.ReadToFollowing("temperature");
-                d.currentTemp = reader.GetAttribute("day") + "°C";
-                d.min = reader.GetAttribute("min") + "°C";
-                d.max = reader.GetAttribute("max") + "°C";
-                d.night = reader.GetAttribute("night") + "°C";
-                d.eve = reader.GetAttribute("eve") + "°C";
-                d.morn = reader.GetAttribute("morn") + "°C";
+                d.currentTemp = reader.GetAttribute("day");
+                d.min = reader.GetAttribute("min");
+                d.max = reader.GetAttribute("max");
+                d.night = reader.GetAttribute("night");
+                d.eve = reader.GetAttribute("eve");
+                d.morn = reader.GetAttribute("morn");
 
                 reader.ReadToFollowing("humidity");
                 d.humidity = reader.GetAttribute("value") + reader.GetAttribute("unit");
