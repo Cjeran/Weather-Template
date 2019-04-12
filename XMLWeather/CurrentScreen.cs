@@ -25,9 +25,9 @@ namespace XMLWeather
             max.Text = Convert.ToDouble(Form1.days[0].max).ToString("0.0") + "°C";
             date.Text = DateTime.Now.ToString("dd-MM-yy");
             time.Text = DateTime.Now.ToString("hh:mm:ss tt");
-            precipitation.Text = Form1.days[0].precipitation;
-            humidity.Text = Form1.days[0].humidity;
-            windspeed.Text = Form1.days[0].windSpeed;
+            precipitation.Text = Form1.days[0].precipitation + " mm";
+            humidity.Text = Form1.days[0].humidity + "%";
+            windspeed.Text = Form1.days[0].windSpeed + " mps";
             windDirection.Text = Form1.days[0].windDirection;
 
             double code = Convert.ToDouble(Form1.days[0].condition);
@@ -50,7 +50,7 @@ namespace XMLWeather
             }
             else if (code >= 700 && code <= 781)
             {
-
+                currentPic.Image = Properties.Resources.mist;
             }
             else if (code == 800)
             {

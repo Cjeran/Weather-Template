@@ -47,13 +47,13 @@ namespace XMLWeather
                 d.condition = reader.GetAttribute("number");
 
                 reader.ReadToFollowing("precipitation");
-                d.precipitation = reader.GetAttribute("value") + "mm";
+                d.precipitation = reader.GetAttribute("value");
 
                 reader.ReadToFollowing("windDirection");
                 d.windDirection = reader.GetAttribute("name");
 
                 reader.ReadToFollowing("windSpeed");
-                d.windSpeed = reader.GetAttribute("mps") + " mps";
+                d.windSpeed = reader.GetAttribute("mps");
 
                 reader.ReadToFollowing("temperature");
                 d.currentTemp = reader.GetAttribute("day");
